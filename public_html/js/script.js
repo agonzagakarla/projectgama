@@ -7,7 +7,7 @@ $(function(){
 let data = new Date();
 //let adate = data.getDate()+'/'+(data.getMonth()+1)+'/'+data.getFullYear()+' - '+data.getHours()+':'+data.getMinutes();
 let dataEnd = data.toLocaleDateString('pt-br');
-let horaEnd = data.toLocaleTimeString();
+let horaEnd = data.toLocaleTimeString('pt-br');
 
 let dataEl = document.querySelector("#data");
 dataEl.value = dataEnd+' - '+horaEnd;
