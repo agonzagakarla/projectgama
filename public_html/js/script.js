@@ -19,6 +19,5 @@ $.getJSON('https://ipapi.co/json/', function(data) {
     console.log(JSON.stringify(data, null, 2));
     var ip = JSON.stringify(data.ip);
     ipEl.value = JSON.parse(ip);
-    console.log(typeof(JSON.parse(ip)))
 });
 
