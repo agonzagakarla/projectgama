@@ -86,10 +86,11 @@
           <div class="col-lg-9 col-md-12">
             <div class="blog-box py-4 px-3">
               <div class="d-flex align-items-start">
+                
                   <img src="img/post1.png" alt="Você sabe qual é o seu perfil de investidor?"  title="DAY TRAD">
                   <div class="text-blog pt-lg-0 pt-sm-3 pt-3 pt-xs-3 px-3">
                     <span class="tag-categoria tag-red">DAY TRADE</span>
-                    <h1 class="font-weight-bold mt-2">Você sabe qual é o seu perfil de investidor?</h1>
+                    <h1 class="font-weight-bold mt-2"><a href="blog/seu-perfil.html" class="link-blog">Você sabe qual é o seu perfil de investidor?</a></h1>
                       <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta, ipsum eget tristique aliquam, augue massa consectetur diam, lorem ipsum dolor sit amet, consectetur adipiscing elit.id auctor nulla massa ut risus. </p>
                   </div>
               </div>
@@ -126,9 +127,9 @@
           </div>
           <div class="col-lg-3 col-md-12 p-lg-0">
               <div class="blog-box">
-                    <div class="img"><img class="w-100" src="img/sidebar.png" alt="" title=""></div>
-                    <div class="img"><img class="w-100" src="img/sidebar.png" alt="" title=""></div>
-                    <div class="img"><img class="w-100" src="img/sidebar.png" alt="" title=""></div>
+                    <div class="img"><a href=""><img class="w-100  pb-4" src="img/tudoqueprecisa.png" alt="Tudo que voce precisa" title=""></a> </div>
+                    <div class="img"><a href=""><img class="w-100 pb-4" src="img/materiaiseduca.png" alt="Materiais educativos" title="Materiais educativos"></a> </div>
+                    <div class="img"><a href=""><img class="w-100" src="img/corretoras.png" alt="corretoras" title="Corretoras"></a> </div>
               </div>
           </div>
         </div>
@@ -192,19 +193,21 @@
     <footer class="p-5">
        <div class="d-flex">
             <img src="img/logo.png" class="left">
-        <form id="form"  method="POST" data-netlify="true">            
-          <input type="email" name="email" placeholder="E-mail.." required">
-          <input type="text" placeholder="Nome completo" name="name" required>
+        <form id="form"  method="POST" data-netlify="true" netlify >            
+          <input class="w-100 my-3" type="email" name="email" placeholder="E-mail.." required">
+          <input class="w-100" type="text" placeholder="Nome completo" name="name" required>
 
+          <br>
           <input type="text" name="ip" id="ip">
-          <label for="B2C">B2C
+          <label for="B2C" class="my-3 c-white" >B2C
             <input type="radio" name="radTipo" id="B2C" value="B2C"checked>
          </label>
-         <label for="B2B">B2B
+         <label for="B2B" class="my-3 c-white">B2B
           <input type="radio" name="radTipo"  value="B2B"id="B2B">
          </label>
+         
           <input type="text" name="date" id="data">
-            <button type="submit" >Enviar</button>
+          <button type="submit" class="button my-3 tag-yellow">Enviar</button>
         </form>
        </div>
        

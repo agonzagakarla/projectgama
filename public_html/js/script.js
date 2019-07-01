@@ -5,7 +5,7 @@ $(function(){
 });
 
 let data = new Date();
-let adate = data.getDate()+'/'+(data.getMonth()+1)+'/'+data.getFullYear()+' - '+data.getHours()+':'+data.getMinutes();
+//let adate = data.getDate()+'/'+(data.getMonth()+1)+'/'+data.getFullYear()+' - '+data.getHours()+':'+data.getMinutes();
 let dataEnd = data.toLocaleDateString('pt-br');
 let horaEnd = data.toLocaleTimeString();
 
