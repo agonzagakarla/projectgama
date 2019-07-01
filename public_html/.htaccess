@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^(.*)$ index.html?url=$1 [QSA,L]
+RewriteRule ^(.*)$ seu-perfil.html?url=$1 [QSA,L]
 
 Options -Indexes
