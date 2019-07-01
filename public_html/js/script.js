@@ -2,12 +2,6 @@ $(function(){
     $('.menu-toogle').click(function(){
         $('.nav').slideToggle();
     });
-    
-    $("#form").submit(function(e) {
-        e.preventDefault();
-      
-
-      });
 });
 
 let data = new Date();
