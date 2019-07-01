@@ -5,7 +5,8 @@
 }
 
 body{
-    background-color: #efefef; 
+    background-color: #efefef;
+    line-height: 1.2;
 
 }
 .c-purple{
@@ -35,11 +36,20 @@ body{
 .blog-box{
     background-color: #fff;
 }
+.blog-box h1{
+        line-height: 38px;
+}
+.blog-box .d-flex img{
+        flex: 1 0 0;
+}
+.blog-box .d-flex .text-blog{
+        flex: 1 5 218px;
+}
 span.tag-categoria{
     
     color: #fff;
     font-weight: bold;
-    padding: 2px 10px;
+    padding: 2px 15px;
 }
 .tag-red{
     background-color: #ee162d;
@@ -61,6 +71,31 @@ span.tag-categoria{
     font-weight: bold;
 }
 
+/** section depoimento  **/
+.depoimento-single{
+    margin: 15px 0;
+}
+.depoimento-single .d-flex{
+    align-items: center;
+}
+
+.img-autor {
+    flex: 1 1 476px;
+}
+.autor{
+    padding: 0 15px;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 14px;
+}
+/** footer **/
+footer{
+    background-color: #343a41;
+}
+footer .d-flex{
+    justify-content: space-between;
+    align-items: center;
+}
 /** responsivo **/
 @media screen and  (min-width: 1200px){
     .container {
@@ -75,10 +110,17 @@ span.tag-categoria{
     .blog-box img.w-100{
         width: auto !important;
     }
+    
+    .img-autor {
+    flex: 1 1 auto;
+}
 }
 
 
 @media screen and (max-width: 768px){
+        .container{
+        max-width: 100% !important;
+    }
     /** menu **/
     ul.nav{
         display: none;
@@ -97,15 +139,15 @@ span.tag-categoria{
         height: 5px;
         border-radius: 3px;
     }
-    .text-blog  h1{
-        font-size: 30px;
+    .text-blog h1 {
+        font-size: 28px;
+        line-height: 1;
     }
-    .d-flex{
-        flex-direction: column;
-    }
+  
 }
-@media screen and (max-width: 600px){
-    .container{
-        max-width: 100% !important;
+@media screen and (max-width: 576px){
+    
+      .d-flex{
+        flex-direction: column;
     }
 }
