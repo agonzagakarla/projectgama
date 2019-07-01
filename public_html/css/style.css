@@ -60,3 +60,52 @@ span.tag-categoria{
     padding-left: 7px;
     font-weight: bold;
 }
+
+/** responsivo **/
+@media screen and  (min-width: 1200px){
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .blog-box .img{
+        text-align: center;
+    }
+    .blog-box img.w-100{
+        width: auto !important;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    /** menu **/
+    ul.nav{
+        display: none;
+        width: 100%;
+        padding: 14px 0;
+    }
+    .menu-toogle{
+        display: block !important;
+        cursor: pointer;
+    }
+    .menu-toogle span{
+        display: block;
+        background-color: #fff;
+        margin: 5px 0;
+        width: 44px;
+        height: 5px;
+        border-radius: 3px;
+    }
+    .text-blog  h1{
+        font-size: 30px;
+    }
+    .d-flex{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 600px){
+    .container{
+        max-width: 100% !important;
+    }
+}
