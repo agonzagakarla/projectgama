@@ -7,11 +7,22 @@
     <meta name="description" content="meu robo investidor">
     <meta name="keywords" content="investimentos, onde investir, robo investimento, dinheiro, dicas, ferramentas">
     <meta name="author" content="Gama">
+    <link rel=”canonical” href="http://meuroboinvestidor.com.br/"/>
     <!-- style bootstrap cdn-->
    <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
     <title>Meu Robo Investidor</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143151874-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-143151874-1');
+  </script>
+
 </head>
 <body>
     <header class="b-purple">
@@ -187,10 +198,10 @@
 
           <input type="text" name="ip" id="ip">
           <label for="B2C">B2C
-            <input type="radio" name="radsex" id="B2C" value="B2C"checked>
+            <input type="radio" name="radTipo" id="B2C" value="B2C"checked>
          </label>
          <label for="B2B">B2B
-          <input type="radio" name="radsex"  value="B2B"id="B2B">
+          <input type="radio" name="radTipo"  value="B2B"id="B2B">
          </label>
           <input type="text" name="date" id="data">
             <button type="submit" >Enviar</button>
