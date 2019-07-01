@@ -181,12 +181,18 @@
     <footer class="p-5">
        <div class="d-flex">
             <img src="img/logo.png" class="left">
-        <form name="contact" method="POST" data-netlify="true">
-            <input type="text" placeholder="Nome completo" name="name">
-            <input type="email" name="email" placeholder="E-mail..">
-            <input type="text" name="date" id="data">
-            <input type="text" name="ip" id="ip">
-            <button type="submit">Enviar</button>
+        <form id="form" name="contact" method="POST" data-netlify="true">            
+          <input type="email" name="email" placeholder="E-mail.." required">
+          <input type="text" placeholder="Nome completo" name="name" required>
+
+          <input type="text" name="ip" id="ip">
+          <input type="radio" name="radsex" id="B2C" checked>
+          <label for="B2C">B2B</label>
+
+          <input type="radio" name="radsex" id="B2B" checked>
+          <label for="B2B">B2B</label>
+          <input type="text" name="date" id="data">
+            <button type="submit" >Enviar</button>
         </form>
        </div>
        
