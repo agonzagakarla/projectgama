@@ -36,8 +36,10 @@ $(function(){
 
 /** enviando form */
     
+
     $('#form').submit(function(e) {
         e.preventDefault();
+        
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
            let email =  document.querySelector('[name=email]');
@@ -45,7 +47,7 @@ $(function(){
            let msg =  document.querySelector('.msg');
            email.value = '';
            nome.value = '';
-            msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
+            msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>';
         });
       });
 
