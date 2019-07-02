@@ -36,7 +36,7 @@ $(function(){
 /** enviando form */
 $('button[type="submit"]').click(function(){
     
-    $("#form").submit(function(e) {
+    $('.form-footer').submit(function(e) {
         e.preventDefault();
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
