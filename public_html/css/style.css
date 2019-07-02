@@ -138,6 +138,10 @@ footer .d-flex{
 #form input[name="radTipo"]{
     cursor: pointer;
 }
+.msg-sucesso{
+    padding: 5px 0;
+    color: #6de14c;
+}
 /** responsivo **/
 @media screen and  (min-width: 1200px){
     .container {

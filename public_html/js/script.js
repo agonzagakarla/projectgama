@@ -16,15 +16,21 @@ $(function(){
     let ipEl = document.querySelector('#ip');
     $.getJSON('https://ipapi.co/json/', function(data) {
         console.log(JSON.stringify(data, null, 2));
-        var ip = JSON.stringify(data.ip);
+        let ip = JSON.stringify(data.ip);
         ipEl.value = JSON.parse(ip);
     });
 
     $("#form").submit(function(e) {
+
         e.preventDefault();
-        var $form = $(this);
+        let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
-          alert("Thank you!");
+           let email =  document.querySelector('[name=email]');
+           let nome =  document.querySelector('[name=name]');
+           let msg =  document.querySelector('.msg');
+           email.value = '';
+           nome.value = '';
+            msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
         });
       });
 });
