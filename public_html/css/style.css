@@ -141,6 +141,7 @@ footer .d-flex{
 .msg-sucesso{
     padding: 5px 0;
     color: #6de14c;
+    font-size: 13px;
 }
 /** responsivo **/
 @media screen and  (min-width: 1200px){

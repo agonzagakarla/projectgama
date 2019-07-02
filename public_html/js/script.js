@@ -22,6 +22,12 @@ $(function(){
 
     $("#form").submit(function(e) {
 
+        var url_atual = window.location.href;
+        if(url_atual === 'https://meuroboinvestidor.com.br'){
+             
+        }else{
+            jQuery('#download').trigger('click');
+        }
         e.preventDefault();
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
