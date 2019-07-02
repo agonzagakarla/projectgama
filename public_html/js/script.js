@@ -28,7 +28,7 @@ $(function(){
            alert('Formulário vazio');
            e.preventDefault();
        }else{
-        btn.trigger('submit');
+        btn.submit();
        }
     }); 
 
@@ -36,8 +36,6 @@ $(function(){
 
 
     $("#form").submit(function(e) {        
-        
-        
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
            let email =  document.querySelector('[name=email]');
