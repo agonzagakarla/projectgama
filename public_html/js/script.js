@@ -29,11 +29,12 @@ $(function(){
            alert('Formulário vazio');
            e.preventDefault();
        }else{
-        btn.trigger('submit');
+        btn.trigger('click');
        }
     }); 
 
 /** enviando form */
+$('button[type="submit"]').click(function(){
     $("#form").submit(function(e) {
         e.preventDefault();
         let $form = $(this);
@@ -46,7 +47,7 @@ $(function(){
             msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
         });
       });
-
+});
     
 
 
