@@ -20,34 +20,34 @@ $(function(){
         ipEl.value = JSON.parse(ip);
     });
 
-    /** não deixa o usuário baixar sem enviar dados */
+    /** não deixa o usuário baixar sem enviar dados 
     $('#download').click(function(e){
         let email =  document.querySelector('[name=email]');
         let nome =  document.querySelector('[name=name]');
-        //let btn = document.querySelector('#form button');
+        let btn = document.querySelector('#form');
        if(email.value == '' && nome.value == ''){
            alert('Formulário vazio');
            e.preventDefault();
        }else{
-        enviarForm();
+        btn.trigger('submit');
        }
     }); 
-
+*/
 /** enviando form */
-document.getElementById("form'").addEventListener("submit", enviarForm);
+    $("#form").submit(function(e) {
+        e.preventDefault();      
+        let $form = $(this);
+        $.post($form.attr("action"), $form.serialize()).then(function() {
+           let email =  document.querySelector('[name=email]');
+           let nome =  document.querySelector('[name=name]');
+           let msg =  document.querySelector('.msg');
+           email.value = '';
+           nome.value = '';
+            msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
+        });
+      });
 
-function enviarForm(e) {
-    e.preventDefault();
-    let $form = $(this);
-    $.post($form.attr("action"), $form.serialize()).then(function() {
-        let email =  document.querySelector('[name=email]');
-        let nome =  document.querySelector('[name=name]');
-        let msg =  document.querySelector('.msg');
-        email.value = '';
-        nome.value = '';
-         msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
-     });
-}
+    
 
 
 });
