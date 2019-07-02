@@ -20,7 +20,7 @@ $(function(){
         ipEl.value = JSON.parse(ip);
     });
 
-    /** não deixa o usuário baixar sem enviar dados */
+    /** não deixa o usuário baixar sem enviar dados 
     $('#download').click(function(e){
         let email =  document.querySelector('[name=email]');
         let nome =  document.querySelector('[name=name]');
@@ -32,12 +32,12 @@ $(function(){
         btn.submit(console.log('download'+ e));
        }
     }); 
+*/
 
 /** enviando form */
     
-    $('#form-footer').submit(function(e) {
+    $('#form').submit(function(e) {
         e.preventDefault();
-        console.log('#form-footer'+ e)
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
            let email =  document.querySelector('[name=email]');
