@@ -34,7 +34,6 @@ $(function(){
     }); 
 
 /** enviando form */
-$('button[type="submit"]').click(function(){
     $("#form").submit(function(e) {
         e.preventDefault();
         let $form = $(this);
@@ -47,7 +46,7 @@ $('button[type="submit"]').click(function(){
             msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
         });
       });
-});
+
     
 
 
