@@ -21,14 +21,16 @@ $(function(){
     });
 
 
-    let url_atual = window.location.href;
+    
     $("#form").submit(function(e) {        
         e.preventDefault();
+        let url_atual = window.location.href;
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
             if(url_atual === 'https://meuroboinvestidor.com.br'){
-             
+                console.log('primeiro blobco');
             }else{
+                console.log('segundo blobco');
                 jQuery('#download').trigger('click');
             }
            let email =  document.querySelector('[name=email]');
