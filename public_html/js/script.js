@@ -20,17 +20,17 @@ $(function(){
         ipEl.value = JSON.parse(ip);
     });
 
-    $("#form").submit(function(e) {
 
-        var url_atual = window.location.href;
-        if(url_atual === 'https://meuroboinvestidor.com.br'){
-             
-        }else{
-            jQuery('#download').trigger('click');
-        }
+    let url_atual = window.location.href;
+    $("#form").submit(function(e) {        
         e.preventDefault();
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
+            if(url_atual === 'https://meuroboinvestidor.com.br'){
+             
+            }else{
+                jQuery('#download').trigger('click');
+            }
            let email =  document.querySelector('[name=email]');
            let nome =  document.querySelector('[name=name]');
            let msg =  document.querySelector('.msg');
