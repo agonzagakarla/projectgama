@@ -39,6 +39,10 @@ a:hover{
     background-color: #332166;
 
 }
+.dropdown-item{
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
 
 /* BLOG CONTENT */
 .blog-box{
