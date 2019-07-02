@@ -24,12 +24,12 @@ $(function(){
     $('#download').click(function(e){
         let email =  document.querySelector('[name=email]');
         let nome =  document.querySelector('[name=name]');
-        let btn = document.querySelector('#form button');
+        let btn = document.querySelector('#form');
        if(email.value == '' && nome.value == ''){
            alert('Formulário vazio');
            e.preventDefault();
        }else{
-        //btn.submit();
+        btn.submit(console.log('download'+ e));
        }
     }); 
 
@@ -37,6 +37,7 @@ $(function(){
     
     $('#form-footer').submit(function(e) {
         e.preventDefault();
+        console.log('#form-footer'+ e)
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
            let email =  document.querySelector('[name=email]');
