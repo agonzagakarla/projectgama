@@ -29,7 +29,7 @@ $(function(){
            alert('Formulário vazio');
            e.preventDefault();
        }else{
-        btn.trigger('click');
+        btn.click();
        }
     }); 
 
