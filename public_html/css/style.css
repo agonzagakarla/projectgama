@@ -192,4 +192,10 @@ footer .d-flex{
       .d-flex{
         flex-direction: column;
     }
+
+    .depoimento-single .d-flex {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 }
