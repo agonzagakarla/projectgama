@@ -37,7 +37,7 @@ $(function(){
 $('button[type="submit"]').click(function(e){
     e.preventDefault();
     $("#form").submit(function(e) {
-             
+        e.preventDefault();
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
            let email =  document.querySelector('[name=email]');
