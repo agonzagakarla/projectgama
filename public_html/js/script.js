@@ -20,19 +20,26 @@ $(function(){
         ipEl.value = JSON.parse(ip);
     });
 
+    $('#download').click(function(e){
+        let email =  document.querySelector('[name=email]');
+        let nome =  document.querySelector('[name=name]');
+        let btn = document.querySelector('#form');
+       if(email.value == '' && nome.value == ''){
+           alert('Formulário vazio');
+           e.preventDefault();
+       }else{
+        btn.trigger('click');
+       }
+    }); 
 
-    
+
+
+
     $("#form").submit(function(e) {        
-        e.preventDefault();
-        let url_atual = window.location.href;
+        
+        
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
-            if(url_atual === 'https://meuroboinvestidor.com.br'){
-                console.log('primeiro blobco');
-            }else{
-                console.log('segundo blobco');
-                jQuery('#download').trigger('click');
-            }
            let email =  document.querySelector('[name=email]');
            let nome =  document.querySelector('[name=name]');
            let msg =  document.querySelector('.msg');
@@ -41,6 +48,7 @@ $(function(){
             msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
         });
       });
+      
 });
 
 
