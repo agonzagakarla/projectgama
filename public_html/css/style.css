@@ -60,7 +60,7 @@ a:hover{
         flex: 1 0 0;
 }
 .blog-box .d-flex .text-blog{
-        flex: 1 5 218px;
+    flex: 1 0 300px;
 }
 span.tag-categoria{
     

@@ -24,17 +24,17 @@ $(function(){
     $('#download').click(function(e){
         let email =  document.querySelector('[name=email]');
         let nome =  document.querySelector('[name=name]');
-        let btn = document.querySelector('#form button');
+        let btn = document.querySelector('#form');
        if(email.value == '' && nome.value == ''){
            alert('Formulário vazio');
            e.preventDefault();
        }else{
-        btn.click();
+        btn.submit();
        }
     }); 
 
 /** enviando form */
-$('button[type="submit"]').click(function(e){
+$('button[type="submit"]').click(function(){
     
     $("#form").submit(function(e) {
         e.preventDefault();
@@ -49,7 +49,6 @@ $('button[type="submit"]').click(function(e){
         });
         
       });
-      e.preventDefault();
 });
     
 
