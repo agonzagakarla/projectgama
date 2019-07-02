@@ -34,8 +34,7 @@ $(function(){
     }); 
 
 /** enviando form */
-$('button[type="submit"]').click(function(e){
-    e.preventDefault();
+$('button[type="submit"]').click(function(){
     $("#form").submit(function(e) {
         e.preventDefault();
         let $form = $(this);
