@@ -34,7 +34,6 @@ $(function(){
     }); 
 
 /** enviando form */
-$('button[type="submit"]').click(function(){
     
     $('.form-footer').submit(function(e) {
         e.preventDefault();
@@ -49,7 +48,7 @@ $('button[type="submit"]').click(function(){
         });
         
       });
-});
+
     
 
 
