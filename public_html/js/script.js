@@ -35,7 +35,7 @@ $(function(){
 
 /** enviando form */
     
-    $('.form-footer').submit(function(e) {
+    $('#form-footer').submit(function(e) {
         e.preventDefault();
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
@@ -46,7 +46,6 @@ $(function(){
            nome.value = '';
             msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
         });
-        
       });
 
     
