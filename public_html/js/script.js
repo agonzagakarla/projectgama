@@ -2,6 +2,15 @@ $(function(){
     $('.menu-toogle').click(function(){
         $('.nav').slideToggle();
     });
+
+    $("#form").submit(function(e) {
+        e.preventDefault();
+      
+        var $form = $(this);
+        $.post($form.attr("action"), $form.serialize()).then(function() {
+          alert("Thank you!");
+        });
+      });
 });
 
 let data = new Date();
