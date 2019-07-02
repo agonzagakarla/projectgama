@@ -29,12 +29,23 @@ $(function(){
            alert('Formulário vazio');
            e.preventDefault();
        }else{
-        btn.submit();
+        btn.submit(function(e) {
+            e.preventDefault();
+            let $form = $(this);
+            $.post($form.attr("action"), $form.serialize()).then(function() {
+               let email =  document.querySelector('[name=email]');
+               let nome =  document.querySelector('[name=name]');
+               let msg =  document.querySelector('.msg');
+               email.value = '';
+               nome.value = '';
+                msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
+            });
+            
+          });
        }
     }); 
 
 /** enviando form */
-$('button[type="submit"]').click(function(){
     
     $("#form").submit(function(e) {
         e.preventDefault();
@@ -49,7 +60,7 @@ $('button[type="submit"]').click(function(){
         });
         
       });
-});
+
     
 
 
