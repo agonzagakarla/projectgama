@@ -28,13 +28,14 @@ $(function(){
            alert('Formulário vazio');
            e.preventDefault();
        }else{
-        btn.submit();
+        btn.trigger('submit');
        }
     }); 
 
 
 
 
+$('button[type="submit"]').click(function(){
     $("#form").submit(function(e) {        
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
@@ -46,7 +47,10 @@ $(function(){
             msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
         });
       });
-      
+});
+    
+
+
 });
 
 
