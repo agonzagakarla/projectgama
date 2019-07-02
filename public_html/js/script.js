@@ -24,7 +24,7 @@ $(function(){
     $('#download').click(function(e){
         let email =  document.querySelector('[name=email]');
         let nome =  document.querySelector('[name=name]');
-        let btn = document.querySelector('#form');
+        let btn = document.querySelector('#form button');
        if(email.value == '' && nome.value == ''){
            alert('Formulário vazio');
            e.preventDefault();
