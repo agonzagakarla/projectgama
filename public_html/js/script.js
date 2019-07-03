@@ -2,7 +2,7 @@ $(function(){
     $('.menu-toogle').click(function(){
         $('.nav').slideToggle();
     });
-
+/** Pegando data */
     let data = new Date();
     //let adate = data.getDate()+'/'+(data.getMonth()+1)+'/'+data.getFullYear()+' - '+data.getHours()+':'+data.getMinutes();
     let dataEnd = data.toLocaleDateString('pt-br');
@@ -11,7 +11,7 @@ $(function(){
     let dataEl = document.querySelector("#data");
     dataEl.value = dataEnd+' - '+horaEnd;
 
-
+/** pegando Ip */
 
     let ipEl = document.querySelector('#ip');
     $.getJSON('https://ipapi.co/json/', function(data) {
@@ -20,6 +20,7 @@ $(function(){
         ipEl.value = JSON.parse(ip);
     });
 
+    /** não deixa o usuário baixar sem enviar dados 
     $('#download').click(function(e){
         let email =  document.querySelector('[name=email]');
         let nome =  document.querySelector('[name=name]');
@@ -28,16 +29,13 @@ $(function(){
            alert('Formulário vazio');
            e.preventDefault();
        }else{
-        btn.trigger('click');
+        btn.trigger('submit');
        }
     }); 
-
-
-
-
-    $("#form").submit(function(e) {        
-        
-        
+*/
+/** enviando form */
+    $("#form").submit(function(e) {
+        e.preventDefault();      
         let $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
            let email =  document.querySelector('[name=email]');
@@ -48,7 +46,10 @@ $(function(){
             msg.innerHTML = '<p class="msg-sucesso">Enviado com sucesso </p>'
         });
       });
-      
+
+    
+
+
 });
 
 
